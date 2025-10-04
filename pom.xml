@@ -8,7 +8,7 @@
 
     <artifactId>jsonb</artifactId>
     <packaging>jar</packaging>
-    <version>0.6</version>
+    <version>0.7</version>
 
     <name>GWT/J2CL compatible Jakarta JSONB annotations</name>
     <description>GWT/J2CL compatible Jakarta JSONB annotations</description>
