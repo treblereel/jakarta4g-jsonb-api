@@ -27,11 +27,37 @@
         </license>
     </licenses>
 
+    <developers>
+        <developer>
+          	<id>m0mus</id>
+            <name>Dmitry Kornilov</name>
+            <email>dmitry.kornilov@oracle.com</email>
+            <url>https://dmitrykornilov.net</url>
+            <organization>Oracle</organization>
+            <roles>
+                <role>Project Lead</role>
+            </roles>
+            <timezone>CET</timezone>
+        </developer>
+        <developer>
+            <id>treblereel</id>
+            <name>Dmitrii Tikhomirov</name>
+            <email>chani.liet@gmail.com</email>
+        </developer>        
+    </developers>
+
     <organization>
         <name>Treblereel</name>
         <url>https://github.com/treblereel</url>
     </organization>
 
+    <scm>
+        <connection>scm:git:git://github.com/treblereel/jakarta4g-jsonb-api.git</connection>
+        <developerConnection>scm:git:ssh://github.com/treblereel/jakarta4g-jsonb-api.git</developerConnection>
+        <url>https://github.com/treblereel/jakarta4g-jsonb-api/tree/master</url>
+        <tag>HEAD</tag>
+    </scm>
+        
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
@@ -41,10 +67,8 @@
         <maven.source.version>3.2.1</maven.source.version>
         <maven.fmt.plugin>2.9</maven.fmt.plugin>
         <maven.license.plugin>3.0</maven.license.plugin>
-        <maven.deploy.plugin>2.8.2</maven.deploy.plugin>
         <maven.gpg.plugin>1.6</maven.gpg.plugin>
         <maven.javadoc.plugin>3.2.0</maven.javadoc.plugin>
-        <maven.release.plugin>2.5.3</maven.release.plugin>
         <maven.scm.provider.gitexe>1.9.5</maven.scm.provider.gitexe>
     </properties>
 
@@ -112,11 +136,12 @@
                         </executions>
                     </plugin>
                     <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-deploy-plugin</artifactId>
-                        <version>${maven.deploy.plugin}</version>
+                        <groupId>org.sonatype.central</groupId>
+                        <artifactId>central-publishing-maven-plugin</artifactId>
+                        <version>0.9.0</version>
+                        <extensions>true</extensions>
                         <configuration>
-                            <skip>false</skip>
+                            <publishingServerId>sonatype</publishingServerId>
                         </configuration>
                     </plugin>
                 </plugins>
